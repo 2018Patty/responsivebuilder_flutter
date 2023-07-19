@@ -1,17 +1,43 @@
 # responsivedemo
 
-A new Flutter project.
+## Responsive Builder
+
+### Portrait
+
+<img src="assets/images/portrait.png" width="300px">
+
+### Lanscape
+
+<img src="assets/images/lanscape.png" width="300px">
+
+Source: https://pub.dev/packages/responsive_builder
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+main.dart
 
-A few resources to get you started if this is your first Flutter project:
+`
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:responsivedemo/businesscard.dart';
+import 'package:responsivedemo/landscapebusinesscard.dart';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+void main() {
+runApp(const MyApp());
+}
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# responsivebuilder_flutter
+class MyApp extends StatelessWidget {
+const MyApp({Key? key}) : super(key: key);
+
+// This widget is the root of your application.
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+home: OrientationLayoutBuilder(
+portrait: (context) => const BusinessCard(),
+landscape: (context) => const LandScapeBusinessCard(),
+),
+);
+}
+}
+`
