@@ -8,7 +8,7 @@
 
 ### Lanscape
 
-<img src="assets/images/lanscape.png" width="300px">
+<img src="assets/images/landscape.png" width="300px">
 
 Source: https://pub.dev/packages/responsive_builder
 
